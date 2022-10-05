@@ -1,2 +1,5 @@
-package cn.wwtianmei.service;public class EacmpleService {
+package cn.wwtianmei.service;
+
+public interface ExampleService {
+    String sayHello(String str);
 }
