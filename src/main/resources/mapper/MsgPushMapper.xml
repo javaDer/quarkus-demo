@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wwtianmei.mapper.MsgPushMapper">
+
+    <resultMap id="BaseResultMap" type="cn.wwtianmei.domain.MsgPush">
+            <result property="id" column="id" jdbcType="BIGINT"/>
+            <result property="msgType" column="msg_type" jdbcType="VARCHAR"/>
+            <result property="msgTitle" column="msg_title" jdbcType="VARCHAR"/>
+            <result property="msgContent" column="msg_content" jdbcType="VARCHAR"/>
+            <result property="bizKey" column="biz_key" jdbcType="VARCHAR"/>
+            <result property="bizType" column="biz_type" jdbcType="VARCHAR"/>
+            <result property="receiveCode" column="receive_code" jdbcType="VARCHAR"/>
+            <result property="receiveUserCode" column="receive_user_code" jdbcType="VARCHAR"/>
+            <result property="receiveUserName" column="receive_user_name" jdbcType="VARCHAR"/>
+            <result property="sendUserCode" column="send_user_code" jdbcType="VARCHAR"/>
+            <result property="sendUserName" column="send_user_name" jdbcType="VARCHAR"/>
+            <result property="sendDate" column="send_date" jdbcType="TIMESTAMP"/>
+            <result property="isMergePush" column="is_merge_push" jdbcType="CHAR"/>
+            <result property="planPushDate" column="plan_push_date" jdbcType="TIMESTAMP"/>
+            <result property="pushNumber" column="push_number" jdbcType="INTEGER"/>
+            <result property="pushReturnCode" column="push_return_code" jdbcType="VARCHAR"/>
+            <result property="pushReturnMsgId" column="push_return_msg_id" jdbcType="VARCHAR"/>
+            <result property="pushReturnContent" column="push_return_content" jdbcType="VARCHAR"/>
+            <result property="pushStatus" column="push_status" jdbcType="CHAR"/>
+            <result property="pushDate" column="push_date" jdbcType="TIMESTAMP"/>
+            <result property="readStatus" column="read_status" jdbcType="CHAR"/>
+            <result property="readDate" column="read_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,msg_type,msg_title,
+        msg_content,biz_key,biz_type,
+        receive_code,receive_user_code,receive_user_name,
+        send_user_code,send_user_name,send_date,
+        is_merge_push,plan_push_date,push_number,
+        push_return_code,push_return_msg_id,push_return_content,
+        push_status,push_date,read_status,
+        read_date
+    </sql>
+</mapper>
